@@ -5,12 +5,17 @@
   font-family: sans-serif;
   color: white;
 }
-.background {
+.header--background {
   position: relative;
   background-image: url("./assets/img/shutterstock_1466290832.jpg");
   background-size: cover;
   background-position: center;
   height: 30rem;
+}
+.main--background {
+  background-image: url("./assets/img/1827683894-huge.jpg");
+  background-position:right;
+  background-size: cover;
 }
 .blur {
   position: absolute;
@@ -23,7 +28,7 @@
 body {
   background-color: #344e41;
 }
-.container {
+/* .container {
   max-width: 1440px;
   margin: auto;
-}
+} */

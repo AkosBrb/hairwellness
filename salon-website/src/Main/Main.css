@@ -1,0 +1,28 @@
+.main--container {
+    display: grid;
+    padding-top: 7rem;
+    grid-template-areas: 
+                        "div1 div2 . . . ."
+                        "div3 div4 . . . ."
+    ;
+}
+.main--container > div {
+    width: 20rem;
+    height: 20rem;
+}
+.main--container img {
+    width: 50px;
+    height: 50px;
+}
+.service--one {
+    grid-area: div1;
+}
+.service--two {
+    grid-area: div2;
+}
+.service--three {
+    grid-area: div3;
+}
+.service--four {
+    grid-area: div4;
+}

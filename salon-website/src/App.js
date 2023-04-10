@@ -5,13 +5,14 @@ import Main from './Main/Main';
 
 function App() {
   return (
-    <div className="background">
-      <HeaderBlur />
-      <div className="container">
+    <>
+      <div className="header--background">
         <Header />
+      </div>
+      <div className="main--background">
         <Main />
       </div>
-    </div>
+    </>
   )
 }
 

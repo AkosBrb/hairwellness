@@ -1,19 +1,15 @@
-import './App.css';
-import HeaderBlur from './Background/HeaderBlur';
-import Header from './Header/Header';
-import Main from './Main/Main';
+import { Outlet } from "react-router-dom";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 
-function App() {
+function ContentLayout() {
   return (
     <>
-      <div className="header--background">
-        <Header />
-      </div>
-      <div className="main--background">
-        <Main />
-      </div>
+      <Header />
+      <Outlet />
+      <Footer />
     </>
   )
 }
 
-export default App;
+export default ContentLayout

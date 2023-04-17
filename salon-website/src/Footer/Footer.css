@@ -1,13 +1,14 @@
 .footer--background {
     position: relative;
+    min-width: 1200px;
     height: 30rem;
     background-image: url("../assets/img/1827683894-huge.jpg");
-    background-position: top;
+    background-position: center;
     background-size: cover;
 }
 .footer--container {
     display: grid;
-    max-width: 600px;
+    max-width: 500px;
     grid-template-columns: 1fr 1fr;
 }
 .open--hours {

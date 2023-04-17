@@ -11,25 +11,25 @@ function Main() {
     return (
         <div className="main--background">
             <main className="main--container">
-                <img className="service--img" src={laminal}></img>
+                <img alt="IMG" className="service--img" src={laminal}></img>
                 <div className="service--one">
                     <img className="main--icon" alt="Kép helye.." src={chair} />
                     <h2>Szolgáltatás 1</h2>
                     <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, voluptatum temporibus quidem perspiciatis dolorem libero corrupti perferendis molestiae quibusdam odit. Odit eveniet commodi quidem adipisci. Architecto nobis laudantium cumque placeat dolorem sunt autem cum illum, eius rerum fugiat voluptates, numquam natus? Ut dolores distinctio recusandae cum officiis molestiae ipsa adipisci!</p>
                 </div>
-                <img className="service--img" src={men}></img>
+                <img alt="IMG" className="service--img" src={men}></img>
                 <div className="service--two">
                     <img className="main--icon" alt="Kép helye.." src={cutting} />
                     <h2>Szolgáltatás 2</h2>
                     <p>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, voluptatum temporibus quidem perspiciatis dolorem libero corrupti perferendis molestiae quibusdam odit. Odit eveniet commodi quidem adipisci. Architecto nobis laudantium cumque placeat dolorem sunt autem cum illum, eius rerum fugiat voluptates, numquam natus? Ut dolores distinctio recusandae cum officiis molestiae ipsa adipisci!</p>
                 </div>
-                <img className="service--img" src={kid}></img>
+                <img alt="IMG" className="service--img" src={kid}></img>
                 <div className="service--three">
                     <img className="main--icon" alt="Kép helye.." src={woman} />
                     <h2>Szolgáltatás 3</h2>
                     <p>3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, voluptatum temporibus quidem perspiciatis dolorem libero corrupti perferendis molestiae quibusdam odit. Odit eveniet commodi quidem adipisci. Architecto nobis laudantium cumque placeat dolorem sunt autem cum illum, eius rerum fugiat voluptates, numquam natus? Ut dolores distinctio recusandae cum officiis molestiae ipsa adipisci!</p>
                 </div>
-                <img className="service--img" src={womanService}></img>
+                <img alt="IMG" className="service--img" src={womanService}></img>
                 <div className="service--four">
                     <img className="main--icon" alt="Kép helye.." src={scissor} />
                     <h2>Szolgáltatás 4</h2>

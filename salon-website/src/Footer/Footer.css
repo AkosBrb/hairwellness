@@ -29,9 +29,11 @@
     display: grid;
     max-height: 15rem;
     align-items: center;
+    justify-items: center;
 }
 .contacts p{
     font-size: 17px;
+    padding: 0;
 }
 .footer--blur {
     position: absolute;

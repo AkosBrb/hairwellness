@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import About from './About/About';
-import Contact from './Contact/Contact';
+import Contact from './components/Contact/Contact';
 import Gallery from './Gallery/Gallery';
 import Prices from './Prices/Prices';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -14,7 +13,6 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: "/", element: <Main /> },
-      { path: "/rolunk", element: <About /> },
       { path: "/kapcsolat", element: <Contact /> },
       { path: "/galeria", element: <Gallery /> },
       { path: "/arak", element: <Prices /> }

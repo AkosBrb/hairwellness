@@ -14,7 +14,6 @@ function Header() {
                     <nav className="navbar--container">
                         <ul className="list--container">
                             <li className="nav--link"><NavLink to={"/"}>Főoldal</NavLink></li>
-                            <li className="nav--link"><NavLink to={"/rolunk"}>Rólunk</NavLink></li>
                             <li className="nav--link"><NavLink to={"/galeria"}>Galéria</NavLink></li>
                             <li className="nav--link"><NavLink to={"/arak"}>Árak</NavLink></li>
                             <li className="nav--link"><NavLink to={"/kapcsolat"}>Kapcsolat</NavLink></li>

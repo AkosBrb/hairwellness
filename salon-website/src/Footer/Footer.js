@@ -1,3 +1,4 @@
+import Contact from '../components/Contact/Contact'
 import './Footer.css'
 function Footer() {
     return (

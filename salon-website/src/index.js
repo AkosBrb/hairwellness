@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Contact from './components/Contact/Contact';
-import Gallery from './Gallery/Gallery';
-import Prices from './Prices/Prices';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Contact from './components/Contact';
+import Gallery from './components/Gallery';
+import Prices from './components/Prices';
 import App from "./App"
-import Main from './Main/Main';
+import Main from './components/Main';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {

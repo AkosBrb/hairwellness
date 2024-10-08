@@ -1,11 +1,11 @@
-import chair from "../../assets/img/salon-chair.png"
-import cutting from "../../assets/img/hair-cutting.png"
-import woman from "../../assets/img/woman.png"
-import scissor from "../../assets/img/scissor-and-comb.png"
-import laminal from "../../assets/img/laminal.jpg"
-import men from "../../assets/img/men.jpg"
-import kid from "../../assets/img/kid.jpg"
-import womanService from "../../assets/img/shutterstock_1452287459.jpg"
+import chair from "../assets/img/salon-chair.png"
+import cutting from "../assets/img/hair-cutting.png"
+import woman from "../assets/img/woman.png"
+import scissor from "../assets/img/scissor-and-comb.png"
+import laminal from "../assets/img/laminal.jpg"
+import men from "../assets/img/men.jpg"
+import kid from "../assets/img/kid.jpg"
+import womanService from "../assets/img/shutterstock_1452287459.jpg"
 function Services() {
     return (
         <main className="main--container">

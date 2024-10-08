@@ -1,6 +1,7 @@
-import About from "../components/About/About"
-import Services from "../components/Services/Services"
-import "./Main.css"
+import About from "./About";
+import Services from "./Services";
+import "../Style.css";
+
 function Main() {
     return (
         <div className="main--background">

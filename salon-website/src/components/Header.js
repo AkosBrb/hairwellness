@@ -1,7 +1,7 @@
 import brandLogo from "../assets/img/logo.jpg"
 import facebookLogo from "../assets/img/face.png"
 import instaLogo from "../assets/img/insta.png"
-import "./Header.css"
+import "../Style.css"
 import { NavLink } from "react-router-dom"
 
 function Header() {

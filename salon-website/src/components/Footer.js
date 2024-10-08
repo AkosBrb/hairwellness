@@ -1,5 +1,5 @@
-import Contact from '../components/Contact/Contact'
-import './Footer.css'
+import '../Style.css';
+
 function Footer() {
     return (
         <div className="footer--background">

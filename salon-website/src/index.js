@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Contact from './components/Contact';
-import Gallery from './components/Gallery';
-import Prices from './components/Prices';
+import Products from './components/Products';
+import Services from './components/Services';
 import App from "./App"
 import Main from './components/Main';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { ProductsProvider } from './contexts/ProductsContexts';
 
 const router = createBrowserRouter([
   {
@@ -14,15 +15,15 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Main /> },
       { path: "/kapcsolat", element: <Contact /> },
-      { path: "/galeria", element: <Gallery /> },
-      { path: "/arak", element: <Prices /> }
+      { path: "/galeria", element: <Products /> },
+      { path: "/szolgaltatasok", element: <Services /> }
     ]
   }
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <>
+  <ProductsProvider>
     <RouterProvider router={router} />
-  </>
+  </ProductsProvider>
 );

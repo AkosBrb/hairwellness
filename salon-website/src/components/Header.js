@@ -23,7 +23,7 @@ function Header() {
                 </div>
                 <hr />
                 <div className="second--header--container">
-                    <div className="brand--logo"><img src={logo} className="logo" /></div>
+                    <div className="brand--logo"><img src={logo} className="logo" alt="logo" /></div>
                     <nav className="navbar--container">
                         <ul className="list--container">
                             <li className="nav--link"><NavLink to={"/"}>Főoldal</NavLink></li>

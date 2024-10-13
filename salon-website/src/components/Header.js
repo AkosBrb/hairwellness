@@ -2,7 +2,8 @@ import "../Style.css"
 import { MdOutlineFacebook } from "react-icons/md";
 import { FaInstagram } from "react-icons/fa";
 import { IoLogoTiktok } from "react-icons/io5";
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import logo from "../assets/img/logo.png";
 
 function Header() {
     return (
@@ -22,17 +23,18 @@ function Header() {
                 </div>
                 <hr />
                 <div className="second--header--container">
-                    <div className="brand--logo">LOGO</div>
-                    <div className="nav--title--container">
-                        <nav className="navbar--container">
-                            <ul className="list--container">
-                                <li className="nav--link"><NavLink to={"/"}>Főoldal</NavLink></li>
-                                <li className="nav--link"><NavLink to={"/galeria"}>Termékek</NavLink></li>
-                                <li className="nav--link"><NavLink to={"/szolgaltatasok"}>Szolgáltatások</NavLink></li>
-                                <li className="nav--link"><NavLink to={"/kapcsolat"}>Kapcsolat</NavLink></li>
-                            </ul>
-                        </nav>
-                    </div>
+                    <div className="brand--logo"><img src={logo} className="logo" /></div>
+                    <nav className="navbar--container">
+                        <ul className="list--container">
+                            <li className="nav--link"><NavLink to={"/"}>Főoldal</NavLink></li>
+                            <li className="nav--link"><NavLink to={"/galeria"}>Termékek</NavLink></li>
+                            <li className="nav--link"><NavLink to={"/szolgaltatasok"}>Szolgáltatások</NavLink></li>
+                            <li className="nav--link"><NavLink to={"/kapcsolat"}>Kapcsolat</NavLink></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div className="main--title">
+                    <h1>Hajwellness & </h1><span>fodrászat</span>
                 </div>
             </header>
             <div className="header--blur"></div>

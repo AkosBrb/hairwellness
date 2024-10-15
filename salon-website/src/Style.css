@@ -38,8 +38,9 @@
 }
 .main--title {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  gap: 4rem;
 }
 .main--title > h1 {
   text-align: center;
@@ -200,7 +201,8 @@ p {
   gap: 1rem;
 }
 .form--container input,
-button {
+button,
+textarea {
   width: 100%;
   max-width: 30rem;
   height: 2rem;

@@ -18,14 +18,21 @@ function Contact() {
 
     return (
         <section className="contact--page--container">
-            <div className="form--container">
+            <div className="contact--header">
                 <h2>Kérdése van? írjon üzenetet!</h2>
+                <div className="contact--infos">
+                    <h4>CÍM:</h4>
+                    <p>2510 Dorog</p>
+                    <p>Bécsi út 53.</p>
+                </div>
+            </div>
+            <div className="form--container">
                 <form onSubmit={(e) => formik.handleSubmit(e)} className="contact--form">
                     <div className="name--input">
                         <label htmlFor="name-input">Név</label>
                         <input onChange={formik.handleChange} value={formik.values.name} id="name-input" name="name" type="text" />
                     </div>
-                    <div className="name--input">
+                    <div className="phone--input">
                         <label htmlFor="phone-input">Telefonszám</label>
                         <input onChange={formik.handleChange} value={formik.values.phone} id="phone-input" name="phone" type="tel" />
                     </div>

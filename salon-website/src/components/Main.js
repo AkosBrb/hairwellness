@@ -3,9 +3,7 @@ import "../Style.css";
 
 function Main() {
     return (
-        <div className="main--background">
-            <h1>Főoldal</h1>
-        </div>
+        <h1>Főoldal</h1>
     )
 }
 

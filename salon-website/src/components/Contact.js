@@ -1,35 +1,42 @@
-import { useState } from "react";
 import { sendEmail } from "../services/sendEmail";
+import { useFormik } from 'formik';
 
 function Contact() {
-    const [formData, setFormData] = useState({
-        name: "",
-        phone: "",
-        email: "",
-        message: ""
+
+    const formik = useFormik({
+        initialValues: {
+            name: "",
+            phone: "",
+            email: "",
+            message: ""
+        },
+        onSubmit: (values, e) => {
+            sendEmail(values)
+            e.preventDefatult()
+        }
     })
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        sendEmail(formData);
-    }
-
-    console.log(formData)
 
     return (
         <section className="contact--page--container">
             <div className="form--container">
                 <h2>Kérdése van? írjon üzenetet!</h2>
-                <form onSubmit={(e) => handleSubmit(e)} className="contact--form">
-                    <input onChange={(e) => handleChange(e)} required name={"name"} type="text" placeholder="Név" />
-                    <input onChange={(e) => handleChange(e)} required name={"phone"} type="tel" placeholder="Telefonszám" />
-                    <input onChange={(e) => handleChange(e)} required name={"email"} type="email" placeholder="Email" />
-                    <textarea cols={30} rows={10} onChange={(e) => handleChange(e)} required name={"message"} placeholder="Üzenet" />
+                <form onSubmit={(e) => formik.handleSubmit(e)} className="contact--form">
+                    <div className="name--input">
+                        <label htmlFor="name-input">Név</label>
+                        <input onChange={formik.handleChange} value={formik.values.name} id="name-input" name="name" type="text" />
+                    </div>
+                    <div className="name--input">
+                        <label htmlFor="phone-input">Telefonszám</label>
+                        <input onChange={formik.handleChange} value={formik.values.phone} id="phone-input" name="phone" type="tel" />
+                    </div>
+                    <div className="email--input--container">
+                        <label htmlFor="email-input">Email cím</label>
+                        <input onChange={formik.handleChange} value={formik.values.email} id="email-input" name="email" type="email" />
+                    </div>
+                    <div className="message--input--container">
+                        <label htmlFor="message-input">Üzenet</label>
+                        <textarea cols={30} rows={10} onChange={formik.handleChange} value={formik.values.message} id="message-input" name="message" />
+                    </div>
                     <button className="btn" type="submit">Küldés</button>
                 </form>
             </div>

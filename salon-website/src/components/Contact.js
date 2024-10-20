@@ -20,7 +20,7 @@ function Contact() {
         <section className="contact--page--container">
             <div className="contact--header">
                 <h2>Kérdése van? írjon üzenetet!</h2>
-                <div className="contact--infos">
+                <div className="contact--page--infos--container">
                     <h4>CÍM:</h4>
                     <p>2510 Dorog</p>
                     <p>Bécsi út 53.</p>

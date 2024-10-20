@@ -10,7 +10,7 @@ function Header() {
         <div className="header--background">
             <header className="header--container">
                 <div className="first--header--container">
-                    <div className="contact--infos">
+                    <div className="contact--infos--header">
                         <span>+ 36 70 266 2221</span>
                         <span>hajwellness@hajwellness.hu</span>
                         <span>2510 Dorog, Bécsi út 53.</span>

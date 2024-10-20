@@ -2,6 +2,7 @@ import { sendEmail } from "../services/sendEmail";
 import { useFormik } from 'formik';
 import contactImg from '../assets/img/blonde-female-getting-new-hairstyle-hair-salon.jpg';
 import { useState } from "react";
+import { contactValidationSchema } from "../schema/validationSchema";
 
 function Contact() {
 
@@ -14,11 +15,14 @@ function Contact() {
             email: "",
             message: ""
         },
+        validationSchema: contactValidationSchema,
         onSubmit: (values) => {
             sendEmail(values);
             setMessageSent(true);
         }
     })
+
+    console.log(formik.errors)
 
     return (
         <section className="contact--page">

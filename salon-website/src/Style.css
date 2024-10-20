@@ -219,6 +219,16 @@ body {
   max-width: 1200px;
   margin: auto;
 }
+.message--sent--container {
+  height: 25rem;
+  width: 65rem;
+  margin-top: 10rem;
+}
+.message--sent--container h2 {
+  color: var(--main-font-color);
+  font-size: 45px;
+  text-align: center;
+}
 .container {
   display: flex;
   width: 100%;

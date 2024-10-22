@@ -54,7 +54,7 @@ function Contact() {
                             </div>
                             <div className="input--container">
                                 <label htmlFor="phone-input">Telefonszám</label>
-                                <input onChange={formik.handleChange} value={formik.values.phone} id="phone-input" name="phone" type="tel" />
+                                <input onChange={formik.handleChange} value={formik.values.phone} placeholder="0620/30/70..." id="phone-input" name="phone" type="tel" />
                             </div>
                             <div className="input--container">
                                 <label htmlFor="email-input">Email cím</label>

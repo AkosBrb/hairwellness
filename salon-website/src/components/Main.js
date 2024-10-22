@@ -1,4 +1,3 @@
-import Services from "./Services";
 import "../Style.css";
 
 function Main() {

@@ -7,6 +7,7 @@ import { contactValidationSchema } from "../schema/validationSchema";
 function Contact() {
 
     const [messageSent, setMessageSent] = useState(false);
+    const [status, setStatus] = useState("")
 
     const formik = useFormik({
         initialValues: {
@@ -17,12 +18,12 @@ function Contact() {
         },
         validationSchema: contactValidationSchema,
         onSubmit: (values) => {
-            sendEmail(values);
+            sendEmail(values).then(response => setStatus(response))
             setMessageSent(true);
         }
     })
 
-    console.log(formik.errors)
+    console.log(status)
 
     return (
         <section className="contact--page">

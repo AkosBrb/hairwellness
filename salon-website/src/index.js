@@ -7,6 +7,7 @@ import App from "./App"
 import Main from './components/Main';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ProductsProvider } from './contexts/ProductsContexts';
+import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter([
   {

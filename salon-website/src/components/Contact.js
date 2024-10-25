@@ -10,7 +10,7 @@ import ContactForm from "../forms/ContactForm";
 function Contact() {
 
     const [messageSent, setMessageSent] = useState(false);
-    /* const [loading, setLoading] = useState(false); */
+    const [loading, setLoading] = useState(false);
 
     const formik = useFormik({
         initialValues: {
@@ -21,11 +21,14 @@ function Contact() {
         },
         validationSchema: contactValidationSchema,
         onSubmit: async (values) => {
+            setLoading(true);
             let response = await sendEmail(values);
             if (response === 200) {
                 setMessageSent(true);
+                setLoading(false)
             } else {
                 toast.error('Hoppá! Hiba történt az üzenet küldésekor.')
+                setLoading(false)
             }
         }
     })
@@ -38,11 +41,9 @@ function Contact() {
                 theme="dark"
                 transition={Bounce}
             />
-            {messageSent ?
-                <MessageSent />
-                :
-                <ContactForm formik={formik} img={contactImg} />
-            }
+            {loading && <div className="loading"></div>}
+            {(messageSent && !loading) && <MessageSent />}
+            {(!messageSent && !loading) && <ContactForm formik={formik} img={contactImg} />}
         </section>
     )
 }

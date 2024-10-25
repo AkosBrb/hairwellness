@@ -6,7 +6,8 @@ export const contactValidationSchema = yup.object().shape({
     .min(3, 'Túl rövid!')
     .max(30, 'Túl hosszú!'),
   phone: yup.number()
-    .required('Kötelező telefonszámot megadni!'),
+    .required('Kötelező telefonszámot megadni!')
+    .typeError('Nem megfelelő telefonszám!'),
   email: yup.string()
     .required('Kötelező e-mail címet megadni!')
     .email('Érvénytelen e-mail cím!'),

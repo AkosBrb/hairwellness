@@ -348,36 +348,6 @@ textarea {
   background-position: center;
   background-size: cover;
 }
-.footer--container {
-  margin-top: 1.5rem;
-  display: grid;
-  max-width: 500px;
-  grid-template-columns: 1fr 1fr;
-}
-.open--hours {
-  height: 30rem;
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr 1fr;
-}
-.open--hours > h3 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  text-align: center;
-}
-.open--hours span {
-  justify-self: center;
-}
-.contacts {
-  display: grid;
-  max-height: 15rem;
-  align-items: center;
-  justify-items: center;
-}
-.contacts p {
-  font-size: 17px;
-  padding: 0;
-}
 .footer--blur {
   position: absolute;
   top: -0.3rem;
@@ -385,4 +355,11 @@ textarea {
   width: 100vw;
   background-color: var(--background-color);
   filter: blur(0.1rem);
+}
+footer {
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+}
+footer iframe {
+  margin-top: 1rem;
 }

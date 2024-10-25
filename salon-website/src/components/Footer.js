@@ -4,25 +4,8 @@ function Footer() {
     return (
         <div className="footer--background">
             <div className="footer--blur"></div>
-            <footer className="footer--container">
-                <div className="open--hours">
-                    <h3>Nyitva tartás</h3>
-                    <span>Hétfő:</span><span>10-16-ig</span>
-                    <span>Kedd:</span><span>9-14-ig</span>
-                    <span>Szerda:</span><span>9-14-ig</span>
-                    <span>Csütörtök:</span><span>12-18-ig</span>
-                    <span>Péntek:</span><span>12-18-ig</span>
-                    <span>Szombat:</span><span>ZÁRVA</span>
-                    <span>Vasárnap:</span><span>ZÁRVA</span>
-                </div>
-                <div className="contacts">
-                    <h3>Elérhetőségek:</h3>
-                    <p>Dorog - 2510</p>
-                    <p>Bécsi út 53.</p>
-                    <div className='phone'>
-                        <span>Telefonszám:</span> <span>+ 36 70 266 2221</span>
-                    </div>
-                </div>
+            <footer>
+                <iframe title='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2684.238176523339!2d18.728595312446824!3d47.71862627108012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476a646ae35c2357%3A0x8ce2dd995a57c6c1!2zRG9yb2csIELDqWNzaSDDunQgNTMsIDI1MTA!5e0!3m2!1shu!2shu!4v1729850659426!5m2!1shu!2shu" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </footer>
         </div>
     )

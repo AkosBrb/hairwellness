@@ -299,6 +299,27 @@ textarea {
   color: var(--secondary-contact-font-color);
 }
 
+/* LOADING */
+
+.loading {
+  margin: 0 auto;
+  margin-top: 25%;
+  margin-bottom: 25%;
+  height: 120px;
+  width: 120px;
+  border: 6px solid;
+  border-color: var(--main-font-color) transparent var(--main-font-color)
+    transparent;
+  border-radius: 50%;
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* FOOTER */
 
 .footer--background {

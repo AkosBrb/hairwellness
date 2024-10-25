@@ -1,4 +1,7 @@
 function ContactForm({ formik, img }) {
+  const { email, message, name, phone } = formik.errors;
+  const { touched } = formik;
+
   return (
     <div className="container">
       <div className="form--container">
@@ -21,21 +24,55 @@ function ContactForm({ formik, img }) {
         <form onSubmit={formik.handleSubmit} className="contact--form">
           <div className="input--container">
             <label htmlFor="name-input">Név</label>
-            <input onChange={formik.handleChange} value={formik.values.name} id="name-input" name="name" type="text" />
+            <input
+              onBlur={formik.handleBlur}
+              className={name && touched.name ? "input--error" : ""}
+              onChange={formik.handleChange}
+              value={formik.values.name}
+              id="name-input"
+              name="name"
+              type="text" />
+            {name && touched.name && <p className="error--message">{name}</p>}
           </div>
           <div className="input--container">
             <label htmlFor="phone-input">Telefonszám</label>
-            <input onChange={formik.handleChange} value={formik.values.phone} placeholder="0620/30/70..." id="phone-input" name="phone" type="tel" />
+            <input
+              onBlur={formik.handleBlur}
+              className={phone && touched.phone ? "input--error" : ""}
+              onChange={formik.handleChange}
+              value={formik.values.phone} placeholder="0620/30/70..."
+              id="phone-input"
+              name="phone"
+              type="tel" />
+            {phone && touched.phone && <p className="error--message">{phone}</p>}
           </div>
           <div className="input--container">
             <label htmlFor="email-input">Email cím</label>
-            <input onChange={formik.handleChange} value={formik.values.email} id="email-input" name="email" type="email" />
+            <input
+              onBlur={formik.handleBlur}
+              className={email && touched.email ? "input--error" : ""}
+              onChange={formik.handleChange}
+              value={formik.values.email}
+              id="email-input"
+              name="email"
+              type="email" />
+            {email && touched.email && <p className="error--message">{email}</p>}
           </div>
           <div className="input--container textarea--container">
             <label htmlFor="message-input">Üzenet</label>
-            <textarea onChange={formik.handleChange} value={formik.values.message} id="message-input" name="message" />
+            <textarea
+              onBlur={formik.handleBlur}
+              className={message && touched.message ? "input--error" : ""}
+              onChange={formik.handleChange}
+              value={formik.values.message}
+              id="message-input"
+              name="message" />
+            {message && touched.message && <p className="error--message">{message}</p>}
           </div>
-          <button className="btn" type="submit">Küldés</button>
+          <button
+            className="btn"
+            type="submit">Küldés
+          </button>
         </form>
       </div>
       <img src={img} alt="contact-img" />

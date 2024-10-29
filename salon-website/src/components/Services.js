@@ -8,32 +8,36 @@ import kid from "../assets/img/kid.jpg"
 import womanService from "../assets/img/shutterstock_1452287459.jpg"
 function Services() {
     return (
-        <main className="services--container">
+        <section className="services--container">
+            <div className="services--title">
+                <h2>Népszerű szolgáltatásaink:</h2>
+                <div className="services--title--underline"></div>
+            </div>
             <img alt="IMG" className="service--img" src={laminal}></img>
-            <div className="service--one">
-                <img className="service--icon" alt="Kép helye.." src={chair} />
-                <h2>Hajszerkezet újjáépítés</h2>
-                <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, voluptatum temporibus quidem perspiciatis dolorem libero corrupti perferendis molestiae quibusdam odit. Odit eveniet commodi quidem adipisci. Architecto nobis laudantium cumque placeat dolorem sunt autem cum illum, eius rerum fugiat voluptates, numquam natus? Ut dolores distinctio recusandae cum officiis molestiae ipsa adipisci!</p>
-            </div>
-            <img alt="IMG" className="service--img" src={men}></img>
-            <div className="service--two">
-                <img className="service--icon" alt="Kép helye.." src={cutting} />
-                <h2>Férfi hajvágás</h2>
-                <p>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, voluptatum temporibus quidem perspiciatis dolorem libero corrupti perferendis molestiae quibusdam odit. Odit eveniet commodi quidem adipisci. Architecto nobis laudantium cumque placeat dolorem sunt autem cum illum, eius rerum fugiat voluptates, numquam natus? Ut dolores distinctio recusandae cum officiis molestiae ipsa adipisci!</p>
-            </div>
-            <img alt="IMG" className="service--img" src={kid}></img>
-            <div className="service--three">
-                <img className="service--icon" alt="Kép helye.." src={woman} />
-                <h2>Gyermek hajvágás</h2>
-                <p>3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, voluptatum temporibus quidem perspiciatis dolorem libero corrupti perferendis molestiae quibusdam odit. Odit eveniet commodi quidem adipisci. Architecto nobis laudantium cumque placeat dolorem sunt autem cum illum, eius rerum fugiat voluptates, numquam natus? Ut dolores distinctio recusandae cum officiis molestiae ipsa adipisci!</p>
+            <div className="service--one service">
+                <img className="service--icon" alt="service img" src={cutting} />
+                <h3>Hajszerkezet újjáépítés</h3>
+                <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, voluptatum temporibus quidem perspiciatis dolorem libero corrupti perferendis molestiae quibusdam odit. Odit eveniet commodi quidem adipisci.</p>
             </div>
             <img alt="IMG" className="service--img" src={womanService}></img>
-            <div className="service--four">
-                <img className="service--icon" alt="Kép helye.." src={scissor} />
-                <h2>Hajgyógyászati kezelés</h2>
-                <p>4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, voluptatum temporibus quidem perspiciatis dolorem libero corrupti perferendis molestiae quibusdam odit. Odit eveniet commodi quidem adipisci. Architecto nobis laudantium cumque placeat dolorem sunt autem cum illum, eius rerum fugiat voluptates, numquam natus? Ut dolores distinctio recusandae cum officiis molestiae ipsa adipisci!</p>
+            <div className="service--two service">
+                <img className="service--icon" alt="service img" src={woman} />
+                <h3>Hajgyógyászati kezelés</h3>
+                <p>4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, voluptatum temporibus quidem perspiciatis dolorem libero corrupti perferendis molestiae quibusdam odit. Odit eveniet commodi quidem adipisci.</p>
             </div>
-        </main>
+            <img alt="IMG" className="service--img" src={kid}></img>
+            <div className="service--three service">
+                <img className="service--icon" alt="service img" src={scissor} />
+                <h3>Gyermek hajvágás</h3>
+                <p>3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, voluptatum temporibus quidem perspiciatis dolorem libero corrupti perferendis molestiae quibusdam odit. Odit eveniet commodi quidem adipisci.</p>
+            </div>
+            <img alt="IMG" className="service--img" src={men}></img>
+            <div className="service--four service">
+                <img className="service--icon" alt="service img" src={chair} />
+                <h3>Férfi hajvágás</h3>
+                <p>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, voluptatum temporibus quidem perspiciatis dolorem libero corrupti perferendis molestiae quibusdam odit. Odit eveniet commodi quidem adipisci.</p>
+            </div>
+        </section>
     )
 }
 

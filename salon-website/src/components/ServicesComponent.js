@@ -11,7 +11,7 @@ function ServicesComponent() {
   return (
     <section className="services--container">
       <div className="services--title">
-        <h2>Népszerű szolgáltatásaink:</h2>
+        <h2>Népszerű szolgáltatások:</h2>
         <div className="underline"></div>
       </div>
       <img alt="IMG" className="service--img" src={laminal}></img>

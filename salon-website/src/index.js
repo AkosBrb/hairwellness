@@ -8,6 +8,7 @@ import Main from './components/Main';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ProductsProvider } from './contexts/ProductsContexts';
 import 'react-toastify/dist/ReactToastify.css';
+import { ServicesProvider } from './contexts/ServicesContext';
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,9 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ProductsProvider>
-    <RouterProvider router={router} />
-  </ProductsProvider>
+  <ServicesProvider>
+    <ProductsProvider>
+      <RouterProvider router={router} />
+    </ProductsProvider>
+  </ServicesProvider>
 );

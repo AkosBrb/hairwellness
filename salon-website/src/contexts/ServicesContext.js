@@ -11,7 +11,5 @@ export function ServicesProvider({ children }) {
     getServicesData().then(data => setServices(data));
   }, [])
 
-  console.log(services)
-
   return <ServicesContext.Provider value={{ services, setServices }}>{children}</ServicesContext.Provider>
 }

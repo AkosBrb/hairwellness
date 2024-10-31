@@ -9,6 +9,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ProductsProvider } from './contexts/ProductsContexts';
 import 'react-toastify/dist/ReactToastify.css';
 import { ServicesProvider } from './contexts/ServicesContext';
+import { AdditionalServicesProvider } from './contexts/AdditionalServicesContext';
+import { ExtraServicesProvider } from './contexts/ExtraServicesContext';
 
 const router = createBrowserRouter([
   {
@@ -25,9 +27,13 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ServicesProvider>
-    <ProductsProvider>
-      <RouterProvider router={router} />
-    </ProductsProvider>
-  </ServicesProvider>
+  <ExtraServicesProvider>
+    <AdditionalServicesProvider>
+      <ServicesProvider>
+        <ProductsProvider>
+          <RouterProvider router={router} />
+        </ProductsProvider>
+      </ServicesProvider>
+    </AdditionalServicesProvider>
+  </ExtraServicesProvider>
 );

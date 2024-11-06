@@ -1,7 +1,7 @@
 import { URL } from "../constants/firebaseConfig"
 
 async function getExtraServices() {
-  const response = await fetch(`${URL}/extras.json`, {
+  const response = await fetch(`${URL}/child.json`, {
     headers: {
       'Content-Type': 'application/json'
     }

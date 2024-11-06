@@ -4,7 +4,7 @@ import getAdditionalServices from "../services/fetchAdditionalServices";
 export const AdditionalServicesContext = createContext();
 
 export function AdditionalServicesProvider({ children }) {
-  const [additionalServices, setAdditionalServices] = useState([]);
+  const [additionalServices, setAdditionalServices] = useState({});
 
   useEffect(() => {
     getAdditionalServices().then(data => setAdditionalServices(data));

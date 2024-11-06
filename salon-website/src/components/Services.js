@@ -1,16 +1,10 @@
-import AdditionalServicesPriceTable from "./AdditionalServicesPriceTable"
-import ExtraServicesPriceTable from "./ExtraServicesPriceTable"
 import ServicesComponent from "./ServicesComponent"
-import WomanServicesPriceTable from "./WomanServicesPriceTable"
+import ServicesPriceTable from "./ServicesPriceTable"
 function Services() {
     return (
         <>
             <ServicesComponent />
-            <section className="price--tables">
-                <WomanServicesPriceTable />
-                <ExtraServicesPriceTable />
-                <AdditionalServicesPriceTable />
-            </section>
+            <ServicesPriceTable />
         </>
     )
 }

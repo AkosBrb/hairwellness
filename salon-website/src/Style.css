@@ -225,6 +225,35 @@ p {
   justify-self: end;
 }
 
+/* PRICES (SERVICES) */
+
+.table--container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.table--container > table {
+  width: 100%;
+}
+.table--container th {
+  text-align: start;
+}
+.table--container th::first-letter {
+  text-transform: capitalize;
+}
+.table--container tr {
+  height: 3rem;
+}
+.table--container th,
+tr {
+  color: var(--main-font-color);
+}
+.section--name th {
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 /* CONTACT PAGE */
 
 .contact--page {

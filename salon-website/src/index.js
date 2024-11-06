@@ -6,11 +6,8 @@ import Services from './components/Services';
 import App from "./App"
 import Main from './components/Main';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { ProductsProvider } from './contexts/ProductsContexts';
 import 'react-toastify/dist/ReactToastify.css';
-import { ServicesProvider } from './contexts/ServicesContext';
-import { AdditionalServicesProvider } from './contexts/AdditionalServicesContext';
-import { ExtraServicesProvider } from './contexts/ExtraServicesContext';
+
 
 const router = createBrowserRouter([
   {
@@ -27,13 +24,5 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ExtraServicesProvider>
-    <AdditionalServicesProvider>
-      <ServicesProvider>
-        <ProductsProvider>
-          <RouterProvider router={router} />
-        </ProductsProvider>
-      </ServicesProvider>
-    </AdditionalServicesProvider>
-  </ExtraServicesProvider>
+  <RouterProvider router={router} />
 );

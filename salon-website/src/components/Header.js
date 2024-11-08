@@ -37,7 +37,6 @@ function Header() {
                     <h1>Hajwellness & </h1><span>fodrászat</span>
                 </div>
             </header>
-            <div className="header--blur"></div>
         </div>
     )
 }

@@ -10,7 +10,7 @@ import womanService from "../assets/img/shutterstock_1452287459.jpg"
 function ServicesComponent() {
   return (
     <section className="services--container">
-      <div className="services--title">
+      <div className="services--title title">
         <h2>Népszerű szolgáltatások:</h2>
         <div className="underline"></div>
       </div>

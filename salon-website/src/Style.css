@@ -50,6 +50,16 @@ body {
   transition-property: all;
   transition-duration: 0.5s;
 }
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.title > h2 {
+  font-size: 35px;
+  color: var(--main-font-color);
+}
 .underline {
   width: 7rem;
   height: 3px;
@@ -172,20 +182,12 @@ p {
   width: 30rem;
 }
 .services--title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
   grid-row-start: 1;
   grid-column-start: 1;
   grid-row-end: 1;
   grid-column-end: 3;
   justify-self: center;
   align-self: center;
-}
-.services--title > h2 {
-  font-size: 35px;
-  color: var(--main-font-color);
 }
 .services--container > div > h3 {
   font-size: 25px;
@@ -419,6 +421,38 @@ textarea {
   }
 }
 
+/* LANDING PAGE */
+
+.landing--page--container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.introduction {
+  display: flex;
+  margin-top: 8rem;
+  gap: 3rem;
+}
+.introduction img {
+  max-width: 550px;
+  max-height: 550px;
+  align-self: center;
+}
+.introduction p {
+  font-size: 22px;
+  align-self: center;
+  text-align: center;
+  min-width: 38rem;
+}
+.introduction > div {
+  display: flex;
+  flex-direction: column;
+}
+.introduction--quote--mark {
+  color: var(--green-color);
+}
+.second--mark {
+  align-self: flex-end;
+}
 /* FOOTER */
 
 .footer--container {

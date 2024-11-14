@@ -1,8 +1,11 @@
 import "../Style.css";
+import Introduction from "./Introduction";
 
 function Main() {
     return (
-        <h1>Főoldal</h1>
+        <section className="landing--page--container">
+            <Introduction />
+        </section>
     )
 }
 

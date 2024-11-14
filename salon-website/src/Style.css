@@ -422,32 +422,54 @@ textarea {
 /* FOOTER */
 
 .footer--container {
+  display: flex;
+  justify-content: center;
   width: 100%;
   margin-top: 10rem;
   background-color: var(--green-color);
 }
 footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.5fr 1fr;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
   margin-top: 1.5rem;
-  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+  height: 24rem;
+  width: 100%;
+  max-width: 1200px;
 }
 footer iframe {
-  margin-top: 1rem;
-  grid-row-start: 2;
-  align-self: center;
+  width: 450px;
+  height: 300px;
+  align-self: flex-end;
 }
 .footer--contact--container {
-  grid-row-start: -2;
-  align-self: center;
-  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  width: 30%;
+}
+.footer--contact--container > p {
+  font-size: 30px;
 }
 .footer--brand--logo {
   grid-column-start: 1;
   grid-column-end: 3;
-  justify-self: center;
 }
-.footer--contact--container > div {
+.footer--contacts--icons {
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer--contacts--icons > div {
+  display: flex;
+  justify-content: space-between;
+}
+.contact--text {
+  width: 15rem;
+  align-self: center;
+}
+.footer--icon {
+  color: var(--main-font-color);
 }

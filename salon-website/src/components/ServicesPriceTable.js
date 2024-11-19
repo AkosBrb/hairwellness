@@ -17,7 +17,7 @@ function ServicesPriceTable() {
 
   return (
     <>
-      <div className="services--title prices--title">
+      <div className="services--title prices--title title">
         <h2>Árak:</h2>
         <div className="underline"></div>
       </div>

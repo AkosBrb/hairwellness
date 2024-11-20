@@ -464,6 +464,18 @@ textarea {
   padding: 1rem;
   border-radius: 8px;
 }
+.landing--page--list--container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  gap: 5rem;
+}
+.landing--page--list--container li {
+  display: flex;
+}
+.landing--page--list--icon {
+  color: var(--main-font-color);
+}
 /* FOOTER */
 
 .footer--container {

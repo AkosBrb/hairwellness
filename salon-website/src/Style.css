@@ -400,27 +400,6 @@ textarea {
   margin-top: 0.25rem;
 }
 
-/* LOADING */
-
-.loading {
-  margin: 0 auto;
-  margin-top: 25%;
-  margin-bottom: 25%;
-  height: 120px;
-  width: 120px;
-  border: 6px solid;
-  border-color: var(--main-font-color) transparent var(--main-font-color)
-    transparent;
-  border-radius: 50%;
-  animation: spin 1s ease infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /* LANDING PAGE */
 
 .landing--page--container {
@@ -529,4 +508,51 @@ footer iframe {
 }
 .footer--icon {
   color: var(--main-font-color);
+}
+
+/* ANIMATIONS */
+
+/* LOADING */
+
+.loading {
+  margin: 0 auto;
+  margin-top: 25%;
+  margin-bottom: 25%;
+  height: 120px;
+  width: 120px;
+  border: 6px solid;
+  border-color: var(--main-font-color) transparent var(--main-font-color)
+    transparent;
+  border-radius: 50%;
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* LANDING PAGE INTRODUCTION*/
+
+.fade-in-1 {
+  opacity: 0;
+  transform: translateX(20px); /* Optional: Adds a slight slide-up effect */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.fade-in-1.visible-1 {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-2 {
+  opacity: 0;
+  transform: translateX(-20px); /* Optional: Adds a slight slide-up effect */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.fade-in-2.visible-2 {
+  opacity: 1;
+  transform: translateX(0);
 }

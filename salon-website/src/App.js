@@ -4,18 +4,18 @@ import Footer from "./components/Footer";
 import { ServicesProvider } from './contexts/ServicesContext';
 import { AdditionalServicesProvider } from './contexts/AdditionalServicesContext';
 import { ExtraServicesProvider } from './contexts/ExtraServicesContext';
-import { ProductsProvider } from './contexts/ProductsContexts';
+import { GalleryProvider } from './contexts/GalleryContext';
 
 function ContentLayout() {
   return (
     <ExtraServicesProvider>
       <AdditionalServicesProvider>
         <ServicesProvider>
-          <ProductsProvider>
+          <GalleryProvider>
             <Header />
             <Outlet />
             <Footer />
-          </ProductsProvider>
+          </GalleryProvider>
         </ServicesProvider>
       </AdditionalServicesProvider>
     </ExtraServicesProvider>

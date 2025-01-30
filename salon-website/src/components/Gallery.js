@@ -1,12 +1,12 @@
 import { useContext } from "react"
 import { Link } from "react-router-dom"
-import { ProductsContext } from "../contexts/ProductsContexts"
+import { GalleryContext } from "../contexts/GalleryContext"
 function Gallery() {
-    const { products } = useContext(ProductsContext);
-    console.log(products)
+    const { gallery } = useContext(GalleryContext);
+    console.log(gallery)
     return (
         <>
-            <h1>Termékek</h1>
+            <h1>Galéria</h1>
             <Link to={"/"}>Vissza a főoldalra</Link>
         </>
     )

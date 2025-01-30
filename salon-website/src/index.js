@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Contact from './components/Contact';
-import Products from './components/Products';
+import Gallery from './components/Gallery';
 import Services from './components/Services';
 import App from "./App"
 import Main from './components/Main';
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Main /> },
       { path: "/kapcsolat", element: <Contact /> },
-      { path: "/galeria", element: <Products /> },
+      { path: "/galeria", element: <Gallery /> },
       { path: "/szolgaltatasok", element: <Services /> }
     ]
   }

@@ -1,8 +1,15 @@
 import { NavLink } from "react-router-dom";
+import { useState, useRef, useEffect } from "react";
+import screenObserver from "../utils/observer";
 
 function ServiceCards() {
+  const [isVisible, setIsVisible] = useState(false);
+  const elementRef = useRef(null);
+
+  useEffect(() => screenObserver(setIsVisible, elementRef), []);
+
   return (
-    <div className="service--cards--container">
+    <div className={`service--cards--container card-fade-in-1 ${isVisible ? "card-visible-1" : ""}`} ref={elementRef}>
       <div className="service--card">
         <img src="" alt="service img" />
         <div className="service--card--text">

@@ -548,11 +548,24 @@ footer iframe {
 
 .fade-in-2 {
   opacity: 0;
-  transform: translateX(-20px); /* Optional: Adds a slight slide-up effect */
+  transform: translateX(-20px);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .fade-in-2.visible-2 {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* LANDING PAGE SERVICE CARDS */
+
+.card-fade-in-1 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.card-fade-in-1.card-visible-1 {
+  opacity: 1;
+  transform: translateY(0);
 }

@@ -1,33 +1,13 @@
 import profileImg from "../assets/img/Edit-Pap.jpg";
 import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
 import { useRef, useEffect, useState } from "react";
+import screenObserver from "../utils/observer";
 
 function Introduction() {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
 
-  useEffect(() => {
-    const currentElement = elementRef.current;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.3 } // Adjusts when the effect triggers (0.3 = 30% visible)
-    );
-
-    if (currentElement) {
-      observer.observe(currentElement);
-    }
-
-    return () => {
-      if (currentElement) {
-        observer.unobserve(currentElement);
-      }
-    };
-  }, []);
+  useEffect(() => screenObserver(setIsVisible, elementRef), []);
 
   return (
     <>

@@ -569,3 +569,15 @@ footer iframe {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* GALLERY */
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rem;
+}
+
+.gallery-img {
+  height: 500px;
+}

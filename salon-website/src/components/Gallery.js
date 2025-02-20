@@ -7,6 +7,11 @@ function Gallery() {
     return (
         <>
             <h1>Galéria</h1>
+            <div className="gallery-container">
+                {gallery.map((imgUrl, i) => {
+                    return <img key={i} alt="img" className="gallery-img" src={imgUrl} />
+                })}
+            </div>
             <Link to={"/"}>Vissza a főoldalra</Link>
         </>
     )

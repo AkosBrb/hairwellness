@@ -573,11 +573,24 @@ footer iframe {
 /* GALLERY */
 
 .gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 8rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 8rem;
+  gap: 5rem;
+  justify-content: center;
 }
 
 .gallery-img {
   height: 500px;
+  border-radius: 8px;
+  box-shadow: 13px 4px 35px -1px rgba(0, 0, 0, 0.62);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-img:hover {
+  transform: scale(1.2);
+  z-index: 1;
 }

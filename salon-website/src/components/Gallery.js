@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
 import fetchGallery from "../services/fetchPhotos"
 function Gallery() {
     const [gallery, setGallery] = useState([]);
@@ -19,7 +18,10 @@ function Gallery() {
                     return <img key={i} alt="img" className="gallery-img" src={imgUrl} />
                 })}
             </div>
-            <Link to={"/"}>Vissza a főoldalra</Link>
+            <div className="photos-link-container">
+                <a className="btn" href={"https://www.facebook.com/profile.php?id=61558684712346&sk=photos"} target="_blank" rel="noreferrer">További fényképek</a>
+                <span>100+ fotó</span>
+            </div>
         </section>
     )
 }

@@ -1,16 +1,21 @@
 import { app } from '../firebaseConfig';
 import { ref, getStorage, listAll, getDownloadURL } from "firebase/storage";
 
-async function fetchGallery(setter) {
+async function fetchGallery() {
   const storage = getStorage(app);
   const fileRef = ref(storage, `gallery/`);
 
   const response = await listAll(fileRef);
-  response.items.forEach(itemRef => {
-    getDownloadURL(itemRef).then(url => setter(prevState => {
-      return [...prevState, url]
-    }))
-  })
+  const urlPromises = response.items.map(itemRef => getDownloadURL(itemRef))
+  const urls = await Promise.all(urlPromises);
+  preloadImgs(urls);
+  return urls;
 };
+function preloadImgs(urls) {
+  urls.forEach(url => {
+    const imgObj = new Image();
+    imgObj.src = url;
+  })
+}
 
 export default fetchGallery;

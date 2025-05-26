@@ -108,7 +108,6 @@ body {
   font-family: "Boungiorno";
   font-size: 15rem;
   font-weight: lighter;
-  width: 30rem;
   padding-bottom: 55px;
   color: var(--main-font-color);
 }
@@ -409,7 +408,8 @@ textarea {
 .introduction {
   display: flex;
   margin-top: 8rem;
-  gap: 3rem;
+  gap: 2.5rem;
+  max-width: 1200px;
 }
 .introduction img {
   max-width: 550px;
@@ -420,7 +420,7 @@ textarea {
   font-size: 22px;
   align-self: center;
   text-align: center;
-  min-width: 38rem;
+  max-width: 38rem;
 }
 .introduction > div {
   display: flex;
@@ -442,6 +442,7 @@ textarea {
   background-color: var(--green-color);
   padding: 1rem;
   border-radius: 8px;
+  max-width: 25rem;
 }
 .landing--page--list--container {
   display: flex;
@@ -612,4 +613,105 @@ footer iframe {
 
 .photos-link-container > span {
   color: var(--main-font-color);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1200px) {
+  .introduction {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .service--cards--container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service--card {
+    max-width: 30rem;
+  }
+}
+
+@media (max-width: 1080px) {
+  .main--title h1 {
+    font-size: 4rem;
+  }
+  .main--title span {
+    font-size: 12rem;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  .footer--container {
+    height: 70rem;
+    align-items: center;
+  }
+  .footer--brand--logo {
+    order: 1;
+  }
+  .footer--contact--container {
+    order: 2;
+    width: auto;
+  }
+  .footer--contact--container > p {
+    text-align: center;
+  }
+  .footer--container iframe {
+    order: 3;
+    align-self: center;
+    width: 70%;
+    height: 450px;
+  }
+  .footer--contacts--icons > div {
+    justify-content: flex-start;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 890px) {
+  .main--title h1 {
+    font-size: 3rem;
+  }
+  .main--title span {
+    font-size: 9rem;
+  }
+  .service--card {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .first--header--container{
+    align-items: center;
+      flex-direction: column;
+      gap: 1rem;
+  }
+  .second--header--container {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+  .list--container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .main--title {
+    display: none;
+  }
+  .header--container {
+    height: 60rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .introduction img {
+    width: 350px;
+  }
+  .introduction p {
+    font-size: 16px;
+  }
 }

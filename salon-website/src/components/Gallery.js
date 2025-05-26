@@ -1,11 +1,8 @@
-import { useEffect, useState } from "react"
-import fetchGallery from "../services/fetchPhotos"
+import { useContext } from "react"
+import { GalleryContext } from "../contexts/GalleryContext"
 function Gallery() {
-    const [gallery, setGallery] = useState([]);
-
-    useEffect(() => {
-        fetchGallery(setGallery);
-    }, [])
+    
+    const gallery = useContext(GalleryContext);
 
     return (
         <section>

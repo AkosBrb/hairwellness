@@ -16,7 +16,9 @@ function Introduction() {
         <div className="underline"></div>
       </div>
       <div className="introduction">
-        <img src={profileImg} alt="pic" ref={elementRef} className={`fade-in-1 ${isVisible ? "visible-1" : ""}`} />
+        <div className="introduction-img-container">
+          <img src={profileImg} alt="pic" ref={elementRef} className={`fade-in-1 ${isVisible ? "visible-1" : ""}`} />
+        </div>
         <div ref={elementRef} className={`fade-in-2 ${isVisible ? "visible-2" : ""}`}>
           <BiSolidQuoteAltLeft size={35} className="introduction--quote--mark" />
           <p>

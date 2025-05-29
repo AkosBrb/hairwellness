@@ -5,7 +5,7 @@ function Gallery() {
     const gallery = useContext(GalleryContext);
 
     return (
-        <section>
+        <section className="gallery-page">
             <div className="title">
                 <h2>Galéria</h2>
                 <div className="underline"></div>

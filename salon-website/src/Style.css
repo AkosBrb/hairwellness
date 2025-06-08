@@ -39,7 +39,6 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  width: 10rem;
   padding: 1rem;
   border-radius: 7px;
   text-align: center;
@@ -61,13 +60,24 @@ body {
   gap: 0.5rem;
 }
 .title > h2 {
-  font-size: 35px;
+  font-size: 24px;
   color: var(--main-font-color);
+  text-transform: uppercase;
 }
 .underline {
   width: 7rem;
   height: 3px;
   background-color: #344e41;
+}
+h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+h2 {
+  text-transform: uppercase;
+}
+p, a {
+  font-size: 14px;
 }
 
 /* HEADER */
@@ -121,7 +131,7 @@ body {
   width: 100%;
   max-width: 28rem;
   justify-content: space-between;
-  font-size: 0.8rem;
+  font-size: 12px;
   color: var(--main-font-color);
 }
 .social--container {
@@ -133,8 +143,8 @@ body {
 .social--container > a {
   color: var(--main-font-color);
 }
-.logo {
-  height: 100px;
+.brand--logo {
+  max-width: 20rem;
 }
 .nav--title--container {
   display: flex;
@@ -149,7 +159,7 @@ body {
 }
 .list--container a {
   text-decoration: none;
-  font-size: 1.2rem;
+  text-transform: uppercase;
   color: var(--main-font-color);
 }
 .nav--link {
@@ -189,27 +199,37 @@ body {
   justify-self: center;
   align-self: center;
 }
-.services--container > div > h3 {
-  font-size: clamp(16px, 2vw, 25px);
-  padding-bottom: 1rem;
+.service {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
 }
-.services--container > div > p {
-  font-size: clamp(16px, 2vw, 25px);
+.service--container {
+  display: flex;
+  gap: 1rem;
 }
 .service--icon {
-  width: clamp(50px, 10vw, 115px);
+  max-width: 50px;
   height: auto;
-  padding: 1em;
-  display: block
+  display: block;
+  order: 2;
 }
 .service--img {
-  width: 100%;
+  width: 50%;
   height: auto;
   display: block;
   border-radius: 1rem;
   box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
   justify-self: center;
   align-self: center;
+}
+.service--description--container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.service--description--container > h3 {
+  order: 1;
 }
 .service--one {
   grid-row-start: 2;
@@ -234,6 +254,7 @@ body {
 
 .prices--title {
   padding-bottom: 5rem;
+  padding-top: 5rem;
 }
 .table--container {
   overflow-x: auto;
@@ -291,8 +312,10 @@ tr {
 }
 .price--categories img,
 .price--table--icon {
-  width: clamp(30px, 8vw, 45px);
+  width: clamp(30px, 8vw, 40px);
   height: auto;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 .price--categories {
   display: flex;
@@ -312,25 +335,37 @@ tr {
   max-width: 1200px;
   margin: auto;
 }
+.modal--container {
+  display: block;
+  position: absolute;
+  max-height: 35rem;
+  max-width: 25rem;
+  background-color: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+.modal--container--off {
+  display: none;
+}
 .message--sent--container {
-  height: 25rem;
+  height: 15rem;
   width: 65rem;
   margin-top: 10rem;
 }
 .message--sent--container h2 {
   color: var(--main-font-color);
-  font-size: 45px;
+  font-size: clamp(32px, 5vw, 45px);
   text-align: center;
 }
 .container {
   display: flex;
   width: 100%;
   max-width: 65rem;
-  height: 100%;
-  max-height: 48rem;
   border-radius: 12px;
   overflow: hidden;
   justify-content: center;
+}
+.blur--container {
+  filter: blur(5px);
 }
 .contact--info--container h4 {
   color: lightgray;
@@ -373,7 +408,6 @@ tr {
 textarea,
 label {
   width: 100%;
-  max-width: 30rem;
   height: 2rem;
 }
 .contact--form button {
@@ -389,6 +423,11 @@ textarea {
   border-bottom: 1px solid lightgray;
   outline: none;
   padding: 5px;
+}
+.input--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .input--container label,
 .contact--info--container p {
@@ -430,7 +469,7 @@ textarea {
   align-self: center;
 }
 .introduction p {
-  font-size: 22px;
+  font-size: 14px;
   align-self: center;
   text-align: center;
   max-width: 38rem;
@@ -514,7 +553,7 @@ footer iframe {
 }
 .footer--contacts--icons > div {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .contact--text {
   width: 15rem;
@@ -624,7 +663,7 @@ footer iframe {
 
 .photos-link-container > a {
   text-decoration: none;
-  width: 20rem;
+  max-width: 100%;
 }
 
 .photos-link-container > span {
@@ -654,6 +693,14 @@ footer iframe {
   }
   .gallery-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .header--container, .landing--page--container, .gallery-page {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .services--page {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -696,7 +743,10 @@ footer iframe {
   display: none;
   }
   .form--container {
-    max-width: 60%;
+    max-width: 100%;
+  }
+  .container {
+    margin: 1rem;
   }
 }
 
@@ -704,6 +754,27 @@ footer iframe {
   .contact--header {
     flex-direction: column;
     gap: 1rem;
+  }
+  .table--container > table {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .services--container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .service {
+    justify-content: center;
+    max-width: 20rem;
+  }
+  .service--container {
+    justify-content: space-around;
+  }
+  .service--img {
+    max-width: 22rem;
   }
 }
 
@@ -724,7 +795,7 @@ footer iframe {
     gap: 2rem;
   }
   .services--container {
-    row-gap: 0;
+    row-gap: 3rem;
   }
 }
 
@@ -737,7 +808,7 @@ footer iframe {
   .second--header--container {
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
   }
   .list--container {
     flex-direction: column;
@@ -750,20 +821,23 @@ footer iframe {
   .header--container {
     height: 60rem;
   }
-  .form--container {
-    max-width: 80%;
-  }
 }
 
 @media (max-width: 550px) {
-  .introduction p {
-    font-size: 16px;
-  }
   .footer--container iframe {
     height: 300px;
   }
   .form--container {
     max-width: 100%;
+  }
+  .service--container {
+    flex-direction: column;
+  }
+  .service--img {
+    width: 30rem;
+  }
+  .service--container {
+    align-items: center;
   }
 }
 
@@ -782,5 +856,13 @@ footer iframe {
   }
   .price--categories > image {
     order: 1;
+  }
+}
+
+@media (max-width: 340px) {
+  .footer--contacts--icons > div {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 }

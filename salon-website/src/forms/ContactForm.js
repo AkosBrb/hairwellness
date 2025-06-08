@@ -1,9 +1,9 @@
-function ContactForm({ formik, img }) {
+function ContactForm({ formik, img, loading, messageSent }) {
   const { email, message, name, phone } = formik.errors;
   const { touched } = formik;
 
   return (
-    <div className="container">
+    <div className={`container ${(!loading && messageSent) ? "blur--container" : ""}`}>
       <div className="form--container">
         <h2>Kérdése van? Írjon üzenetet!</h2>
         <div className="contact--header">
@@ -31,7 +31,8 @@ function ContactForm({ formik, img }) {
               value={formik.values.name}
               id="name-input"
               name="name"
-              type="text" />
+              type="text"
+              disabled={(!loading && messageSent) ? true : false} />
             {name && touched.name && <p className="error--message">{name}</p>}
           </div>
           <div className="input--container">
@@ -43,7 +44,8 @@ function ContactForm({ formik, img }) {
               value={formik.values.phone} placeholder="0620/30/70..."
               id="phone-input"
               name="phone"
-              type="tel" />
+              type="tel"
+              disabled={(!loading && messageSent) ? true : false} />
             {phone && touched.phone && <p className="error--message">{phone}</p>}
           </div>
           <div className="input--container">
@@ -55,7 +57,8 @@ function ContactForm({ formik, img }) {
               value={formik.values.email}
               id="email-input"
               name="email"
-              type="email" />
+              type="email"
+              disabled={(!loading && messageSent) ? true : false} />
             {email && touched.email && <p className="error--message">{email}</p>}
           </div>
           <div className="input--container textarea--container">
@@ -66,11 +69,13 @@ function ContactForm({ formik, img }) {
               onChange={formik.handleChange}
               value={formik.values.message}
               id="message-input"
-              name="message" />
+              name="message"
+              disabled={(!loading && messageSent) ? true : false} />
             {message && touched.message && <p className="error--message">{message}</p>}
           </div>
           <button
             className="btn"
+            disabled={(!loading && messageSent) ? true : false}
             type="submit">Küldés
           </button>
         </form>

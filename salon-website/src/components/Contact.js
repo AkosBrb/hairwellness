@@ -4,8 +4,8 @@ import contactImg from '../assets/img/blonde-female-getting-new-hairstyle-hair-s
 import { useState } from "react";
 import { contactValidationSchema } from "../schema/validationSchema";
 import { Bounce, ToastContainer, toast } from 'react-toastify';
-import MessageSent from "./MessageSent";
 import ContactForm from "../forms/ContactForm";
+import ContactPageModal from "./ContactPageModal";
 
 function Contact() {
 
@@ -42,8 +42,8 @@ function Contact() {
                 transition={Bounce}
             />
             {loading && <div className="loading"></div>}
-            {(messageSent && !loading) && <MessageSent />}
-            {(!messageSent && !loading) && <ContactForm formik={formik} img={contactImg} />}
+            <ContactPageModal loading={loading} messageSent={messageSent}/>
+            {!loading && <ContactForm loading={loading} messageSent={messageSent} formik={formik} img={contactImg} />}
         </section>
     )
 }

@@ -17,7 +17,7 @@ function PriceListPage() {
 
   return (
     <>
-      <div className="services--title prices--title title">
+      <div className="title">
         <h2>Árak:</h2>
         <div className="underline"></div>
       </div>

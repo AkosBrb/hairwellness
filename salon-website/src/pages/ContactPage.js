@@ -35,6 +35,10 @@ function ContactPage() {
 
     return (
         <section className="contact--page">
+            <div className="title">
+                <h2>Kapcsolat</h2>
+                <div className="underline"></div>
+            </div>
             <ToastContainer
                 position="top-center"
                 closeOnClick

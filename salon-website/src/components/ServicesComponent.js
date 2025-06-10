@@ -6,10 +6,16 @@ import laminal from "../assets/img/laminal.jpg"
 import men from "../assets/img/men.jpg"
 import kid from "../assets/img/kid.jpg"
 import womanService from "../assets/img/shutterstock_1452287459.jpg"
+import { useState, useRef, useEffect } from "react";
+import screenObserver from "../utils/observer";
 
 function ServicesComponent() {
+  const [isVisible, setIsVisible] = useState(false);
+  const elementRef = useRef(null);
+
+  useEffect(() => screenObserver(setIsVisible, elementRef), []);
   return (
-    <section className="services--container">
+    <section className={`services--container card-fade-in-1 ${isVisible ? "card-visible-1" : ""}`} ref={elementRef}>
       <div className="services--title title">
         <h2>Népszerű szolgáltatások:</h2>
         <div className="underline"></div>

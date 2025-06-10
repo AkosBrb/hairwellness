@@ -10,14 +10,14 @@ function Introduction() {
   useEffect(() => screenObserver(setIsVisible, elementRef), []);
 
   return (
-    <>
+    <div >
       <div className="title">
         <h2>Bemutatkozás</h2>
         <div className="underline"></div>
       </div>
       <div className="introduction">
-        <div className="introduction-img-container">
-          <img src={profileImg} alt="pic" ref={elementRef} className={`fade-in-1 ${isVisible ? "visible-1" : ""}`} />
+        <div ref={elementRef} className={`introduction-img-container fade-in-1 ${isVisible ? "visible-1" : ""}`}>
+          <img src={profileImg} alt="pic" />
         </div>
         <div ref={elementRef} className={`fade-in-2 ${isVisible ? "visible-2" : ""}`}>
           <BiSolidQuoteAltLeft size={35} className="introduction--quote--mark" />
@@ -33,7 +33,7 @@ function Introduction() {
           <BiSolidQuoteAltRight size={35} className="introduction--quote--mark second--mark" />
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Contact from './components/Contact';
-import Gallery from './components/Gallery';
-import Services from './components/Services';
 import App from "./App"
-import Main from './components/Main';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import 'react-toastify/dist/ReactToastify.css';
+import LandingPage from './pages/LandingPage';
+import ContactPage from './pages/ContactPage';
+import PriceListPage from './pages/PriceListPage';
+import GalleryPage from './pages/GalleryPage';
 
 
 const router = createBrowserRouter([
@@ -14,10 +14,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
-      { path: "/", element: <Main /> },
-      { path: "/kapcsolat", element: <Contact /> },
-      { path: "/galeria", element: <Gallery /> },
-      { path: "/szolgaltatasok", element: <Services /> }
+      { path: "/", element: <LandingPage /> },
+      { path: "/kapcsolat", element: <ContactPage /> },
+      { path: "/galeria", element: <GalleryPage /> },
+      { path: "/arlista", element: <PriceListPage /> }
     ]
   }
 ])

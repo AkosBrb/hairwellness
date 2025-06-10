@@ -5,9 +5,9 @@ import { useState } from "react";
 import { contactValidationSchema } from "../schema/validationSchema";
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 import ContactForm from "../forms/ContactForm";
-import ContactPageModal from "./ContactPageModal";
+import ContactPageModal from "../components/ContactPageModal";
 
-function Contact() {
+function ContactPage() {
 
     const [messageSent, setMessageSent] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -48,4 +48,4 @@ function Contact() {
     )
 }
 
-export default Contact
+export default ContactPage

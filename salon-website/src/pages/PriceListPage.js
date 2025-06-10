@@ -10,7 +10,7 @@ import halfLongHair from "../assets/icons/woman-hair.png";
 import longHair from "../assets/icons/long-wavy-hair-variant.png";
 import man from "../assets/icons/young-man.png";
 
-function ServicesPriceTable() {
+function PriceListPage() {
   const { services } = useContext(ServicesContext);
   const { extraServices } = useContext(ExtraServicesContext);
   const { additionalServices } = useContext(AdditionalServicesContext);
@@ -138,4 +138,4 @@ function ServicesPriceTable() {
   )
 }
 
-export default ServicesPriceTable
+export default PriceListPage

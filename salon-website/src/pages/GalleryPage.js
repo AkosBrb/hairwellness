@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { GalleryContext } from "../contexts/GalleryContext"
-function Gallery() {
+function GalleryPage() {
     
     const gallery = useContext(GalleryContext);
 
@@ -23,4 +23,4 @@ function Gallery() {
     )
 }
 
-export default Gallery
+export default GalleryPage

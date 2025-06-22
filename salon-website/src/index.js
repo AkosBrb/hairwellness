@@ -7,6 +7,7 @@ import LandingPage from './pages/LandingPage';
 import ContactPage from './pages/ContactPage';
 import PriceListPage from './pages/PriceListPage';
 import GalleryPage from './pages/GalleryPage';
+import OxygeniPage from './pages/OxygeniPage';
 
 
 const router = createBrowserRouter([
@@ -17,7 +18,8 @@ const router = createBrowserRouter([
       { path: "/", element: <LandingPage /> },
       { path: "/kapcsolat", element: <ContactPage /> },
       { path: "/galeria", element: <GalleryPage /> },
-      { path: "/arlista", element: <PriceListPage /> }
+      { path: "/arlista", element: <PriceListPage /> },
+      {path: "/oxygeni", element: <OxygeniPage />}
     ]
   }
 ])

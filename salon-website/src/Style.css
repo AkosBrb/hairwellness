@@ -79,6 +79,12 @@ h2 {
 p, a {
   font-size: 14px;
 }
+h4 {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 5rem;
+  color: #a3b18a;
+}
 
 /* HEADER */
 
@@ -174,6 +180,34 @@ p, a {
   width: 100vw;
   background-color: var(--background-color);
   filter: blur(0.1rem);
+}
+.list--container li:first-child {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  padding: 5px 20px;
+  bottom: 5px;
+  font-weight: bold;
+}
+.list--container li:first-child a {
+  color: #90e0ef;
+}
+.list--container li:first-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #023e8a;
+  z-index: -1;
+  transition: width 0.5s ease;
+  border-radius: 6px;
+}
+.list--container li:first-child:hover::before {
+  width: 100%;
+  right: auto;
+  left: 0;
 }
 
 /* SERVICES */
@@ -665,14 +699,66 @@ footer iframe {
   color: var(--main-font-color);
 }
 
-/* MEDIA QUERIES */
+/* OXYGENI PAGE */
 
-/* @media (max-width: 1250px) {
-  .header--container, .landing--page--container > div, .gallery-page, .services--page, footer {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-} */
+.oxygeni--page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.oxygeni--container > p {
+  font-size: 16px;
+  max-width: 35rem;
+}
+
+.oxygeni--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.oxy--img--container {
+  max-width: 560px;
+  box-shadow: 13px 4px 35px -1px rgba(0, 0, 0, 0.62);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.oxy--img {
+  max-width: 100%;
+}
+.oxygeni--list--container > h4 {
+  text-align: start;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+.oxygeni--list--container li {
+  color: var(--main-font-color);
+}
+.oxygeni--page div:nth-child(3n) {
+  margin-bottom: 5rem;
+}
+.oxygeni--home--description--container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.oxygeni--home--description {
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+}
+.oxygeni--iframe--container {
+  width: 560px;
+  max-width: 100%;
+}
+.oxygeni--iframe--container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+/* MEDIA QUERIES */
 
 @media (max-width: 1200px) {
   .introduction {
@@ -743,6 +829,16 @@ footer iframe {
   .container {
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+  .oxygeni--container {
+    flex-direction: column;
+    gap: 2rem
+  }
+  .oxy--intro--img {
+    order: 1;
+  }
+  .oxygeni--intro {
+    order: 2;
   }
 }
 

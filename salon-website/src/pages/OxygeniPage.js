@@ -4,6 +4,10 @@ import oxygeniPic2 from "../assets/img/oxygeni-description.JPG";
 function OxygeniPage() {
     return (
         <section className="oxygeni--page">
+            <div className="title oxy--title">
+                <h2>HAJGYÓGYÁSZAT - OXIGÉNTERÁPIA</h2>
+                <div className="underline oxy--underline"></div>
+            </div>
             <div className="oxygeni--container">
             <p className="oxygeni--intro">
                 Manapság tízből kilenc ember valamilyen fejbőrrel kapcsolatos panasztól szenved. Ezek kialakulásához hozzájárulhatnak a nem megfelelő kozmetikumok, a fokozott stressz, egészségtelen étkezési szokások, környezeti szennyeződések, a városi életmód vagy akár öröklött hajlamok is.
@@ -45,7 +49,6 @@ function OxygeniPage() {
                     <li>Alopecia</li>
                     <li>Autoimmun hajhullás</li>
                     <li>Férfias kopaszodás</li>
-                    <li>Ritkuló haj pl. hajdúsítás a Nagy Nap előtt menyasszonyoknak</li>
                     <li>Kemoterápia, sugárkezelés után hajvesztés</li>
                     <li>Hajbeültetés előtt/után fejbőr stimulálásra</li>
                     <li>Fejbőrbetegségek: pikkelysömör, seborrhea</li>

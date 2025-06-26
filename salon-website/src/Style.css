@@ -79,12 +79,6 @@ h2 {
 p, a {
   font-size: 14px;
 }
-h4 {
-  text-align: center;
-  margin-bottom: 3rem;
-  margin-top: 5rem;
-  color: #a3b18a;
-}
 
 /* HEADER */
 
@@ -706,13 +700,11 @@ footer iframe {
   margin: 0 auto;
 }
 
-.title > .oxy--underline {
-  width: 26rem;
-  background-color: #023e8a;
-}
-
-.oxy--title > h2 {
-  color:#90e0ef;
+.oxygeni--page h4 {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 5rem;
+  color: #a3b18a;
 }
 
 .oxygeni--container > p {
@@ -720,6 +712,10 @@ footer iframe {
   max-width: 35rem;
 }
 
+.oxybanner--container > img {
+  max-width: 100%;
+}
+ 
 .oxygeni--container {
   display: flex;
   justify-content: space-between;

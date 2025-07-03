@@ -164,6 +164,25 @@ p, a {
 .nav--link {
   list-style-type: none;
 }
+.nav--link a {
+  position: relative;
+  display: inline-block;
+  padding: 5px 15px;
+  transition: color 0.3s ease;
+}
+.nav--link a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #3a5a40;
+  transition: width 0.3s ease;
+}
+.nav--link a:hover::after {
+  width: 100%;
+}
 .main--background {
   background-color: var(--background-color);
 }
@@ -175,33 +194,27 @@ p, a {
   background-color: var(--background-color);
   filter: blur(0.1rem);
 }
-.list--container li:first-child {
+.oxiLink {
   position: relative;
-  overflow: hidden;
-  z-index: 1;
+  display: inline-block;
   padding: 5px 20px;
-  bottom: 5px;
   font-weight: bold;
 }
-.list--container li:first-child a {
+.oxiLink a {
   color: #90e0ef;
 }
-.list--container li:first-child::before {
+.oxiLink a::after {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 0%;
-  height: 100%;
-  background-color: #023e8a;
-  z-index: -1;
-  transition: width 0.5s ease;
-  border-radius: 6px;
-}
-.list--container li:first-child:hover::before {
-  width: 100%;
-  right: auto;
   left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #023e8a;
+  transition: width 0.3s ease;
+}
+.oxiLink a:hover::after {
+  width: 100%;
 }
 
 /* SERVICES */
@@ -712,8 +725,18 @@ footer iframe {
   max-width: 35rem;
 }
 
+.oxybanner--container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .oxybanner--container > img {
-  max-width: 100%;
+  width: 100%;
+}
+
+.oxyWide {
+  display: block;
 }
  
 .oxygeni--container {
@@ -723,7 +746,7 @@ footer iframe {
   margin-top: 5rem;
 }
 
-.oxygeni--page div:nth-child(5n) {
+.oxygeni--page div:nth-child(4n) {
   justify-content: flex-start;
   gap: 5rem;
 }
@@ -882,6 +905,16 @@ footer iframe {
   .service--img {
     max-width: 22rem;
   }
+    .first--header--container{
+    align-items: center;
+      flex-direction: column;
+      gap: 1rem;
+  }
+  .second--header--container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 }
 
 @media (max-width: 890px) {
@@ -906,16 +939,6 @@ footer iframe {
 }
 
 @media (max-width: 800px) {
-  .first--header--container{
-    align-items: center;
-      flex-direction: column;
-      gap: 1rem;
-  }
-  .second--header--container {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
   .list--container {
     flex-direction: column;
     align-items: center;
@@ -928,7 +951,6 @@ footer iframe {
     padding-bottom: 1.5rem;
   }
 }
-
 @media (max-width: 550px) {
   .footer--container iframe {
     height: 300px;

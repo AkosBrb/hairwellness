@@ -26,7 +26,7 @@ function Header() {
                     <div className="brand--logo"><img src={logo} className="logo" alt="logo" /></div>
                     <nav className="navbar--container">
                         <ul className="list--container">
-                            <li className="nav--link"><NavLink to={"/oxygeni"}>Oxygeni</NavLink></li>
+                            <li className="oxiLink"><NavLink to={"/oxygeni"}>Oxygeni</NavLink></li>
                             <li className="nav--link"><NavLink to={"/"}>Főoldal</NavLink></li>
                             <li className="nav--link"><NavLink to={"/galeria"}>Galéria</NavLink></li>
                             <li className="nav--link"><NavLink to={"/arlista"}>Árlista</NavLink></li>

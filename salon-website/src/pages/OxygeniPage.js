@@ -1,13 +1,14 @@
 import oxygeniPic1 from "../assets/img/oxi-intro.JPG";
 import oxygeniPic2 from "../assets/img/oxygeni-description.JPG";
-import oxyBanner from "../assets/img/oxybanner.png";
+import oxyBannerWide from "../assets/img/banner3.png";
 
 function OxygeniPage() {
     return (
+        <>
+        <div className="oxybanner--container">
+            <img src={oxyBannerWide} alt="pic" className="oxyWide" />
+        </div>
         <section className="oxygeni--page">
-            <div className="oxybanner--container">
-                <img src={oxyBanner} alt="pic" />
-            </div>
             <div className="oxygeni--container">
                 <p className="oxygeni--intro">
                     Manapság tízből kilenc ember valamilyen fejbőrrel kapcsolatos panasztól szenved. Ezek kialakulásához hozzájárulhatnak a nem megfelelő kozmetikumok, a fokozott stressz, egészségtelen étkezési szokások, környezeti szennyeződések, a városi életmód vagy akár öröklött hajlamok is.
@@ -65,6 +66,7 @@ function OxygeniPage() {
                 </p>
             </div>
         </section>
+        </>
     )
 }
 

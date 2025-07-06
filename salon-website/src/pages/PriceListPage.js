@@ -9,6 +9,7 @@ import shortHair from "../assets/icons/female-short-hair-variant.png";
 import halfLongHair from "../assets/icons/woman-hair.png";
 import longHair from "../assets/icons/long-wavy-hair-variant.png";
 import man from "../assets/icons/young-man.png";
+import OxygeniPriceList from "../components/OxygeniPriceList";
 
 function PriceListPage() {
   const { services } = useContext(ServicesContext);
@@ -134,6 +135,7 @@ function PriceListPage() {
           </tbody>
         </table>
       </div>
+      <OxygeniPriceList />
     </>
   )
 }

@@ -1,8 +1,12 @@
+import line from "../assets/img/line.png";
+import oxyLogo from "../assets/img/oxigeny.png";
+
 function OxygeniPriceList() {
     return (
     <div className="oxy--price--list--container">
         <div className="first--section">
-            <h4 className="oxy--price--sub--title">Hajlaminálás/CURLY/METHOD/METAL Detox + OXY terápia</h4>
+            <img src={oxyLogo} alt="oxy-pic" />
+            <h4 className="oxy--price--sub--title">Hajlaminálás / CURLY / METHOD / METAL Detox + OXY terápia</h4>
             <div className="oxy--service--container">
                 <span>Félhosszú</span>
                 <span>34 000 Ft / alkalom</span>
@@ -27,13 +31,14 @@ function OxygeniPriceList() {
                 <span>67 800 Ft</span>
             </div>
         </div>
+        <img src={line} alt="line" />
         <div className="second--section">
             <h4 className="oxy--price--sub--title">Hajgyógyászati kezelések</h4>
             <p>Az ár tartalmazza a konzultációt, diagnózist és a tanácsadást</p>
             <div className="oxy--service--container">
                 <div>
-                    <span>Hajgyógyászati tanácsadás</span>
-                    <span>- mikrokamerás fejbőr és hajdiagnózis</span>
+                    <span>Hajgyógyászati tanácsadás <br /> - mikrokamerás fejbőr és hajdiagnózis</span>
+                    <span></span>
                 </div>
                 <span>6000 Ft</span>
             </div>
@@ -50,7 +55,7 @@ function OxygeniPriceList() {
                 <span>10 alkalmas bérlet</span>
                 <span>200 000 Ft</span>
             </div>
-            <p>A bérletben kedvezményesebb a terápia ami 20000 Ft / alkalom plusz minden 5. kezelés mellé 1 ajándék hajvágás is jár!</p>
+            <p>A bérletben kedvezményesebb a terápia ami 20 000 Ft / alkalom plusz minden 5. kezelés mellé 1 ajándék hajvágás is jár!</p>
             <hr />
             <div className="oxy--service--container">
                 <span>Oxygén terápia félhosszú hajra és hosszú hajra</span>
@@ -64,8 +69,9 @@ function OxygeniPriceList() {
                 <span>10 alkalmas bérlet</span>
                 <span>230 000 Ft</span>
             </div>
-            <p>A bérletben kedvezményesebb a terápia ami 23000 Ft / alkalom plusz minden 5. kezelés mellé 1 ajándék hajvágás is jár!</p>
+            <p>A bérletben kedvezményesebb a terápia ami 23 000 Ft / alkalom plusz minden 5. kezelés mellé 1 ajándék hajvágás is jár!</p>
         </div>
+        <img src={line} alt="line" />
         <div className="third--section">
             <h4 className="oxy--price--sub--title">Oxygeni kisrutin kezelések</h4>
             <div className="section--three--sub--container">
@@ -97,8 +103,7 @@ function OxygeniPriceList() {
                     <li>Hajvégápolás</li>
                     <li>Hajszárítás és formázás</li>
                 </ol>
-                <p>A kezelések ára nem tartalmazza a hajszárítást.</p>
-                <p>Pluszban fizetendő a hajhossztól függően.</p>
+                <p>A kezelések ára nem tartalmazza a hajszárítást, pluszban fizetendő a hajhossztól függően.</p>
             </div>
         </div>
     </div>
